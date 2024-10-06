@@ -1,6 +1,6 @@
 # Ecommerce_Website
 
-This project is a full-stack eCommerce web application built using the MERN stack (MongoDB, Express, React, and Node.js). It includes JWT-based authentication, Cloudinary for image storage, Stripe for payments, and various user and admin functionalities.
+This project is a full-stack eCommerce web application built using the MERN stack (MongoDB, Express, React, and Node.js). It includes JWT-based authentication, Cloudinary for image storage,shadcn ui, Stripe for payments, and various user and admin functionalities.
 
 Features:-
 User Features
