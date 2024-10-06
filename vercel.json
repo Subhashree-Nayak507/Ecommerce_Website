@@ -19,11 +19,11 @@
       "dest": "/server/server.js"
     },
     {
-      "src": "/(.*)",
-      "dest": "/client/dist/index.html"
+      "handle": "filesystem"
     },
     {
-      "handle": "filesystem"
+      "src": "/(.*)",
+      "dest": "/client/dist/index.html"
     }
   ]
 }
