@@ -7,10 +7,11 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
+# Dependencies
 node_modules
-dist
-dist-ssr
-*.local
+
+# Build output
+/dist
 
 # Editor directories and files
 .vscode/*
@@ -23,5 +24,8 @@ dist-ssr
 *.sln
 *.sw?
 
-# But do not ignore dist folder in client
+# Local env files
+*.local
+
+# Do not ignore dist folder in client
 !client/dist
