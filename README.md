@@ -24,3 +24,12 @@ Cloudinary: Cloud service used for storing and managing product images.
 Stripe: Payment gateway for handling secure payments.
 Redux: State management for handling global application state.
 Axios: HTTP client for making API requests from the frontend.
+
+Project Structure:-
+/client               # Frontend React application
+/server               # Backend Node.js application
+  /controllers        # API request handlers
+  /models             # Mongoose models (User, Product, Order)
+  /routes             # Express routes for API
+  /middlewares        # Authentication and other middlewares
+
