@@ -20,8 +20,7 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/client/dist/$1",
-      "status": 404
+      "dest": "/client/dist/$1"
     },
     {
       "handle": "filesystem"
