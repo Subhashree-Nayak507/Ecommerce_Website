@@ -27,9 +27,6 @@ function AuthRegister() {
           title: resultAction.payload.message,
           variant: "success",
         });
-        // setTimeout(() => {
-        //   navigate("/auth/login");
-        // }, 1500); 
         navigate('/auth/login')
       } else if (registerUser.rejected.match(resultAction)) {
         toast({

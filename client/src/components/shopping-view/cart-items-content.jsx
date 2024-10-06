@@ -75,19 +75,25 @@ function UserCartItems({ cartItem }){
             className="object-cover w-20 h-20 rounded"/>
             <div className="flex-1">
                 <h3 className="font-extrabold">{cartItem?.title}</h3>
-                <div className="flex items-center mt-1 gap-2 mt-1">
-                    <Button variant="outline" 
-                    size="icon"
-                     className="h-8 w-8 rounded-full"
-                     onClick={()=>handleUpdateQuantity(cartItem,'minus')}>
-                        <Minus className="w-4 h-4 " />
-                        <space className="sr-only">Decrease</space>
+                <div className="flex items-center mt-1 gap-2">
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-8 w-8 rounded-full"
+                        onClick={() => handleUpdateQuantity(cartItem, 'minus')}
+                    >
+                        <Minus className="w-4 h-4" />
+                        <span className="sr-only">Decrease</span>
                     </Button>
                     <span className="font-semibold">{cartItem?.quantity}</span>
-                    <Button variant="outline" size="icon" className="h-8 w-8 rounded-full"
-                    onClick={()=>handleUpdateQuantity(cartItem,'plus')}>
-                        <Plus className="w-4 h-4 " />
-                        <space className="sr-only">Increase</space>
+                    <Button
+                        variant="outline"
+                        size="icon"
+                        className="h-8 w-8 rounded-full"
+                        onClick={() => handleUpdateQuantity(cartItem, 'plus')}
+                    >
+                        <Plus className="w-4 h-4" />
+                        <span className="sr-only">Increase</span>
                     </Button>
                 </div>
             </div>
