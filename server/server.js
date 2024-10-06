@@ -44,6 +44,10 @@ app.use('/api/shop/cart',shopCartRouter);
 app.use("/api/shop/address", shopAddressRouter);
 app.use("/api/shop/order",shopOrderRoute);
 app.use("/api/shop/search",shopSearchRouter)
+
+app.get('/test',(req,res)=>{
+  res.json({"msg":"success"})
+})
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {
