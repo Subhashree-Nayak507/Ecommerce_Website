@@ -98,7 +98,7 @@ function shoppingHome(){
             });
           }
         });
-      }
+      }it 
 
     useEffect(() => {
         const timer = setInterval(() => {

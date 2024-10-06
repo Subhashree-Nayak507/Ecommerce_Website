@@ -16,17 +16,6 @@ function CheckAuth({ isAuthenticated, user, children }) {
     }
   }
 
-  // if (location.pathname.includes("/register")) {
-  //   if (isAuthenticated) {
-  //     return <Navigate to="/auth/login" />;
-  //   }
-  //   return <>{children}</>;
-  // }
-
-  // if (!isAuthenticated) {
-  //   return <Navigate to="/auth/login" />;
-  // }
-
   if (isAuthenticated && (location.pathname === "/auth/login")) {
     return <Navigate to="/shop/home" />;
   }
