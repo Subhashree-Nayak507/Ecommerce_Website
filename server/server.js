@@ -45,13 +45,8 @@ app.use("/api/shop/address", shopAddressRouter);
 app.use("/api/shop/order",shopOrderRoute);
 app.use("/api/shop/search",shopSearchRouter)
 
-<<<<<<< HEAD
 app.get('/',(req,res)=>{
   res.json({"msg":"hello"})
-=======
-app.get('/test',(req,res)=>{
-  res.json({"msg":"success"})
->>>>>>> origin/main
 })
 const PORT = process.env.PORT || 5000;
 
