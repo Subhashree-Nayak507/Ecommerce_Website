@@ -40,19 +40,20 @@ function ShoppingOrders() {
   console.log(orderDetails, "orderDetails");
 
   return (
-    <Card>
-      <CardHeader>
-        <CardTitle>Order History</CardTitle>
-      </CardHeader>
-      <CardContent>
-        <Table>
+    <Card className="w-full overflow-hidden">
+    <CardHeader>
+      <CardTitle>Order History</CardTitle>
+    </CardHeader>
+    <CardContent>
+      <div className="overflow-x-auto">
+        <Table >
           <TableHeader>
             <TableRow>
-              <TableHead>Order ID</TableHead>
-              <TableHead>Order Date</TableHead>
-              <TableHead>Order Status</TableHead>
-              <TableHead>Order Price</TableHead>
-              <TableHead>
+              <TableHead className="whitespace-nowrap">Order ID</TableHead>
+              <TableHead className="whitespace-nowrap">Order Date</TableHead>
+              <TableHead className="whitespace-nowrap">Order Status</TableHead>
+              <TableHead className="whitespace-nowrap">Order Price</TableHead>
+              <TableHead className="whitespace-nowrap">
                 <span className="sr-only">Details</span>
               </TableHead>
             </TableRow>
@@ -60,10 +61,10 @@ function ShoppingOrders() {
           <TableBody>
             {orderList && orderList.length > 0
               ? orderList.map((orderItem) => (
-                  <TableRow>
-                    <TableCell>{orderItem?._id}</TableCell>
-                    <TableCell>{orderItem?.orderDate.split("T")[0]}</TableCell>
-                    <TableCell>
+                  <TableRow key={orderItem?._id}>
+                    <TableCell className="whitespace-nowrap">{orderItem?._id}</TableCell>
+                    <TableCell className="whitespace-nowrap">{orderItem?.orderDate.split("T")[0]}</TableCell>
+                    <TableCell className="whitespace-nowrap">
                       <Badge
                         className={`py-1 px-3 ${
                           orderItem?.orderStatus === "confirmed"
@@ -76,7 +77,7 @@ function ShoppingOrders() {
                         {orderItem?.orderStatus}
                       </Badge>
                     </TableCell>
-                    <TableCell>${orderItem?.totalAmount}</TableCell>
+                    <TableCell className="whitespace-nowrap">${orderItem?.totalAmount}</TableCell>
                     <TableCell>
                       <Dialog
                         open={openDetailsDialog}
@@ -85,10 +86,7 @@ function ShoppingOrders() {
                           dispatch(resetOrderDetails());
                         }}
                       >
-                        <Button
-                          onClick={() =>
-                            handleFetchOrderDetails(orderItem?._id)
-                          }>
+                        <Button onClick={() => handleFetchOrderDetails(orderItem?._id)}>
                           View Details
                         </Button>
                         <ShoppingOrderDetailsView orderDetails={orderDetails} />
@@ -96,11 +94,17 @@ function ShoppingOrders() {
                     </TableCell>
                   </TableRow>
                 ))
-              : null}
+              : (
+                <TableRow>
+                  <TableCell colSpan={5} className="text-center">No orders found</TableCell>
+                </TableRow>
+              )}
           </TableBody>
         </Table>
-      </CardContent>
-    </Card>
+      </div>
+    </CardContent>
+  </Card>  
+
   );
 }
 

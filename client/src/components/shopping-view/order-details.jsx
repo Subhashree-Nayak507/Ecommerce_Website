@@ -52,10 +52,10 @@ function ShoppingOrderDetailsView({ orderDetails }) {
         <div className="grid gap-4">
           <div className="grid gap-2">
             <div className="font-medium">Order Details</div>
-            <ul className="grid gap-3">
+            <ul className="grid gap-3" >
               {orderDetails?.cartItems && orderDetails?.cartItems.length > 0
                 ? orderDetails?.cartItems.map((item) => (
-                    <li className="flex items-center justify-between">
+                    <li key={item._id} className="flex items-center justify-between">
                       <span>Title: {item.title}</span>
                       <span>Quantity:{item.quantity}</span>
                       <span>Price: ${item.price}</span>

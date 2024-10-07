@@ -10,16 +10,9 @@ export default defineConfig({
       "@": path.resolve(__dirname, "./src")
     }
   },
-<<<<<<< HEAD
-  build: {
-    outDir: 'dist',
-    emptyOutDir: true,
-  },
-=======
     build: {
     outDir: path.resolve(__dirname, 'dist'),
     emptyOutDir: true,
-  },
+  }
 
->>>>>>> origin/main
 })

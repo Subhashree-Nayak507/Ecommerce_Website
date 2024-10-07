@@ -185,6 +185,7 @@ function ShoppingListing() {
           {productList && productList.length > 0
             ? productList.map((productItem) => (
                 <ShoppingProductTitle
+                key={productItem._id}
                   handleGetProductDetails={handleGetProductDetails}
                   product={productItem}
                   handleAddtoCart={handleAddtoCart}

@@ -98,7 +98,7 @@ function shoppingHome(){
             });
           }
         });
-      }it 
+      }
 
     useEffect(() => {
         const timer = setInterval(() => {
@@ -169,6 +169,7 @@ function shoppingHome(){
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
             {categoriesWithIcon.map((categoryItem) => (
               <Card 
+              key={categoryItem.id}
               className="cursor-pointer hover:shadow-lg transition-shadow" 
               onClick={() =>
                 handleNavigateToListingPage(categoryItem, "category")
@@ -188,6 +189,7 @@ function shoppingHome(){
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
             {brandsWithIcon.map((brandItem) => (
               <Card
+              key={brandItem.id}
                 className="cursor-pointer hover:shadow-lg transition-shadow"
                 onClick={() => handleNavigateToListingPage(brandItem, "brand")}
               >
@@ -209,6 +211,7 @@ function shoppingHome(){
             {productList && productList.length > 0
               ? productList.map((productItem) => (
                   <ShoppingProductTitle
+                  key={productItem._id}
                   handleGetProductDetails={handleGetProductDetails}
                   product={productItem}
                   handleAddtoCart={() => handleAddtoCart(productItem._id)}
