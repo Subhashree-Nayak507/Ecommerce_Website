@@ -45,7 +45,8 @@ This project is a full-stack eCommerce web application built using the MERN stac
 - **Stripe**: Payment gateway for handling secure payments.
 - **Redux**: State management for handling global application state.
 - **Axios**: HTTP client for making API requests from the frontend.
-
+- **ShadCN UI**: A component library used to build user interfaces with a focus on accessibility and customization.
+- 
 ## Installation & Setup
 1. Clone the repository: `git clone <repository-url>`
 2. Navigate to the project directory: `cd <project-directory>`
@@ -54,5 +55,5 @@ This project is a full-stack eCommerce web application built using the MERN stac
    - For the frontend: `npm install` (in the frontend folder)
 4. Set up environment variables (e.g., for MongoDB, Stripe).
 5. Start the development server:
-   - Backend: `npm start` (in the backend folder)
-   - Frontend: `npm start` (in the frontend folder)
+   - Backend: `npm run dev` (in the backend folder)
+   - Frontend: `npm run dev` (in the frontend folder)
