@@ -46,7 +46,7 @@ This project is a full-stack eCommerce web application built using the MERN stac
 - **Redux**: State management for handling global application state.
 - **Axios**: HTTP client for making API requests from the frontend.
 - **ShadCN UI**: A component library used to build user interfaces with a focus on accessibility and customization.
-- 
+
 ## Installation & Setup
 1. Clone the repository: `git clone <repository-url>`
 2. Navigate to the project directory: `cd <project-directory>`
