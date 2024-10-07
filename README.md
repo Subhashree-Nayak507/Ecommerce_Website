@@ -25,6 +25,3 @@ Stripe: Payment gateway for handling secure payments.
 Redux: State management for handling global application state.
 Axios: HTTP client for making API requests from the frontend.
 
-
-  /middlewares        # Authentication and other middlewares
-
