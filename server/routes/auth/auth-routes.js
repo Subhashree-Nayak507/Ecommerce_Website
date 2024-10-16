@@ -1,6 +1,6 @@
 const express = require('express');
 const { registerUser, loginUser,logoutUser,authMiddleware } = require('../../controllers/auth-controller');
-const { User2 } = require('lucide-react');
+
 
 const router = express.Router();
 router.post('/register', registerUser);
